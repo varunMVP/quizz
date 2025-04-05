@@ -1,0 +1,152 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: coral;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+p{
+    color: white;
+    height: 50px;
+    font-size: 50px;
+}
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.question-box {
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.card.option-card {
+    width: 120px;
+    height: 180px;
+    margin: 0 10px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border: 2px solid #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    transform: rotateY(180deg); /* Initially hidden */
+}
+
+.card-back {
+    background-color: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg); /* Flip to show the front side */
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.streak-meter {
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+    transform: translateY(50%);
+    font-size: 18px;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.car-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100%; /* Full screen width */
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carbg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100px; /* Same height as .car-container */
+    background: url('carbg.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Make sure it's behind the car */
+}
+
+#car {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.6s ease;
+    background: url('car-image.png') no-repeat center center;
+    background-size: cover;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>Welocome to the COI Quizz</p>
+    <div class="score">
+        Score: <span id="score">0</span>
+    </div>
+
+    <div id="question-box" class="question-box">
+        What is the preamble of the Indian Constitution?
+    </div>
+
+    <div class="options">
+        <div class="card option-card" data-index="0" onclick="checkAnswer(this)">
+            <div class="card-inner">
+                <div class="card-back">
+                    <img src="Constitution_of_India.webp" alt="Card Backside" />
+                </div>
+                <div class="card-front">
+                    A brief introduction
+                </div>
+            </div>
+        </div>
+        <div class="card option-card" data-index="1" onclick="checkAnswer(this)">
+            <div class="card-inner">
+                <div class="card-back">
+                    <img src="Constitution_of_India.webp" alt="Card Backside" />
+                </div>
+                <div class="card-front">
+                    A set of guidelines
+                </div>
+            </div>
+        </div>
+        <div class="card option-card" data-index="2" onclick="checkAnswer(this)">
+            <div class="card-inner">
+                <div class="card-back">
+                    <img src="Constitution_of_India.webp" alt="Card Backside" />
+                </div>
+                <div class="card-front">
+                    A declaration of goals
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="streak-meter">
+        Streak: <span id="streak">0</span>
+    </div>
+    <!-- <div class="carbg">
+        <img src="carbg.jpg"/>
+    </div> -->
+    <div class="car-container">
+        
+        <img id="car" src="cark.jpg" alt="Car" />
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
